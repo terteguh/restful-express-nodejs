@@ -2,7 +2,7 @@
   "name": "restful-express-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/tevoeh/restful-express-nodejs/issues"
   },
-  "homepage": "https://github.com/tevoeh/restful-express-nodejs#readme"
+  "homepage": "https://github.com/tevoeh/restful-express-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
 }
