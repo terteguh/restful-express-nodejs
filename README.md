@@ -82,3 +82,7 @@ npm start
 ## Try edit index.js
 
 express will automatically restart and apply change
+
+## Install mongoose
+
+npm i mongoose
