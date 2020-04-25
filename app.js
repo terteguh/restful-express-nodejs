@@ -15,12 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 bookRouter.route('/books')
-  .post((req, res) =>{
+  .post((req, res) => {
     const book = new Book(req.body);
-
-    // eslint-disable-next-line no-console
-    console.log(book);
-    return res.json(book);
+    book.save();
+    return res.status(201).json(book);
   })
   .get((req, res) => {
     // const { query } = req;
