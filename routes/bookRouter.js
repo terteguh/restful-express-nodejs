@@ -1,16 +1,14 @@
 /* eslint-disable no-param-reassign */
 
 const express = require('express');
+const booksController = require('../controllers/booksController.js');
 
 function routes(Book) {
   const bookRouter = express.Router();
+  const controller = booksController(Book);
 
   bookRouter.route('/books')
-    .post((req, res) => {
-      const book = new Book(req.body);
-      book.save();
-      return res.status(201).json(book);
-    })
+    .post(controller.post)
     .get((req, res) => {
       // const { query } = req;
       const query = {};
