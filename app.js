@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
   res.send(`Wellcome to d API ${port}`);
 });
 
-app.listen(port, () => {
+app.server = app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Hello world! ${port}`);
 });
